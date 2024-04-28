@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: white;
+}
+
+.swipe {
+  position: absolute;
+}
+
+.cardContainer {
+  width: 90vw;
+  max-width: 460px;
+  height: 470px;
+}
+
+.card {
+  position: relative;
+  background-color: #fff;
+  width: 460px;
+  max-width: 460px;
+  height: 450px;
+  box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.cardContent {
+  width: 100%;
+  height: 100%;
+}
+
+.card h3 {
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+  color: #fff;
+}
+
+.infoText {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  color: #fff;
+  animation-name: popup;
+  animation-duration: 800ms;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  width: 460px;
+}
+
+@media (max-width: 625px) {
+  .buttons {
+    flex-direction: column;
+  }
+}
+
+.buttons button {
+  margin-left: 20px;
+  flex-shrink: 0;
+  padding: 10px;
+  border-radius: 9999px; /* Set border-radius to a large value for full rounding */
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  background-color: #df1d1d;
+  transition: 200ms;
+
+  font-weight: bolder;
+  width: 130px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(1, 1);
+  }
+  10% {
+    transform: scale(1.1, 1.1);
+  }
+  30% {
+    transform: scale(0.9, 0.9);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  57% {
+    transform: scale(1, 1);
+  }
+  64% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
