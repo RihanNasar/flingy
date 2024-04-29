@@ -27,15 +27,13 @@ function Matches() {
   const characters = db;
   return (
     <div className=" items-center h-full">
-      <h5 className="text-4xl font-bold text-center text-red-400 m-12">
-        Matches
-      </h5>
-      <div className="flex flex-wrap m-12 space-y-7 items-center justify-evenly">
+      <h5 className="text-4xl font-bold text-center text-white m-4">Matches</h5>
+      <div className="flex flex-wrap m-5 space-y-7 items-center justify-evenly">
         {characters.map((character) => (
           <div className="my-10">
             <a
               href="#"
-              class="flex flex-col items-center bg-red-500 border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl "
+              class="flex flex-col items-center bg-red-500  border-none rounded-lg shadow md:flex-row md:max-w-xl "
             >
               <img
                 class="object-cover w-64 h-64 rounded-t-lg md:rounded-none md:rounded-s-lg"

@@ -3,7 +3,31 @@ import TinderCard from "react-tinder-card";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ClearIcon from "@mui/icons-material/Clear";
 import ReplayIcon from "@mui/icons-material/Replay";
-const Feed = ({ characters }) => {
+const Feed = () => {
+  const db = [
+    {
+      name: "Cleopatra kunnamkulam",
+      url: "./img/adithya.jpg",
+    },
+    {
+      name: "Erlich Bachman",
+      url: "./img/erlich.jpg",
+    },
+    {
+      name: "Monica Hall",
+      url: "./img/monica.jpg",
+    },
+    {
+      name: "Jared Dunn",
+      url: "./img/jared.jpg",
+    },
+    {
+      name: "Dinesh Chugtai",
+      url: "./img/dinesh.jpg",
+    },
+  ];
+
+  const characters = db;
   const [currentIndex, setCurrentIndex] = useState(characters.length - 1);
   const [lastDirection, setLastDirection] = useState(null);
 
