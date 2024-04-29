@@ -4,22 +4,27 @@ function Matches() {
   const db = [
     {
       name: "Cleopatra kunnamkulam",
+      bio: "Hi, I'm Kunnamkulam. I love eating and sleeping every day",
       url: "./img/adithya.jpg",
     },
     {
       name: "Erlich Bachman",
+      bio: "Hey, I'm Erlich. I'm passionate about technology and startups. Looking for someone who shares my interests and can challenge me intellectually.",
       url: "./img/erlich.jpg",
     },
     {
       name: "Monica Hall",
+      bio: "Hi there, I'm Monica. I'm a fitness enthusiast and enjoy outdoor activities like hiking and cycling. Let's stay active together!",
       url: "./img/monica.jpg",
     },
     {
       name: "Jared Dunn",
+      bio: "Hello, I'm Jared. I'm a big fan of data and analytics. Looking for someone who appreciates insights and enjoys deep conversations.",
       url: "./img/jared.jpg",
     },
     {
       name: "Dinesh Chugtai",
+      bio: "Hey, I'm Dinesh. I'm a software engineer by day and a stand-up comedian by night. Let me make you laugh!",
       url: "./img/dinesh.jpg",
     },
   ];
@@ -45,9 +50,7 @@ function Matches() {
                   {character.name}
                 </h5>
                 <p class="mb-3 font-normal bg-red-500 text-white">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Dolorum officia assumenda odit alias soluta recusandae debitis
-                  repudiandae eos sequi. Dignissimos!
+                  {character.bio}
                 </p>
               </div>
             </a>

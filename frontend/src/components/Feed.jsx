@@ -1,5 +1,6 @@
 import React, { useState, useRef, useMemo } from "react";
 import TinderCard from "react-tinder-card";
+import { redirect, useNavigate } from "react-router-dom";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ClearIcon from "@mui/icons-material/Clear";
 import ReplayIcon from "@mui/icons-material/Replay";
@@ -7,27 +8,33 @@ const Feed = () => {
   const db = [
     {
       name: "Cleopatra kunnamkulam",
+      bio: "Hi, I'm Kunnamkulam. I love eating and sleeping every day",
       url: "./img/adithya.jpg",
     },
     {
       name: "Erlich Bachman",
+      bio: "Hey, I'm Erlich. I'm passionate about technology and startups. Looking for someone who shares my interests and can challenge me intellectually.",
       url: "./img/erlich.jpg",
     },
     {
       name: "Monica Hall",
+      bio: "Hi there, I'm Monica. I'm a fitness enthusiast and enjoy outdoor activities like hiking and cycling. Let's stay active together!",
       url: "./img/monica.jpg",
     },
     {
       name: "Jared Dunn",
+      bio: "Hello, I'm Jared. I'm a big fan of data and analytics. Looking for someone who appreciates insights and enjoys deep conversations.",
       url: "./img/jared.jpg",
     },
     {
       name: "Dinesh Chugtai",
+      bio: "Hey, I'm Dinesh. I'm a software engineer by day and a stand-up comedian by night. Let me make you laugh!",
       url: "./img/dinesh.jpg",
     },
   ];
 
   const characters = db;
+  const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(characters.length - 1);
   const [lastDirection, setLastDirection] = useState(null);
 
@@ -45,7 +52,9 @@ const Feed = () => {
 
   const canGoBack = currentIndex < characters.length - 1;
   const canSwipe = currentIndex >= 0;
-
+  if (!canSwipe) {
+    navigate("/matches");
+  }
   const swiped = (direction, nameToDelete, index) => {
     setLastDirection(direction);
     updateCurrentIndex(index - 1);
