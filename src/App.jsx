@@ -34,7 +34,7 @@ function App() {
   const characters = db;
   return (
     <div className="">
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center">
         <div className="">
           <Matches />
         </div>
